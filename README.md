@@ -242,6 +242,7 @@ Built with ❤️, ☕, and an unhealthy amount of `box-shadow`.
 **Remember:** If it ain't animated, we don't want it.
 
 ---
+
 ### ⭐ Star This Repo If:
 - You survived reading this README
 - You actually opened the project
