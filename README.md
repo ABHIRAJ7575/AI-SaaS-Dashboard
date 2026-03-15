@@ -251,7 +251,6 @@ Built with ❤️, ☕, and an unhealthy amount of `box-shadow`.
 
 ---
 
-
 **Made with questionable decisions and zero regrets** 😎
 
 *"Why use a framework when you can suffer build from scratch?"*  
