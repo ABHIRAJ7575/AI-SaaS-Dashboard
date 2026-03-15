@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI SaaS Dashboard - Settings</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3 class="logo">AI-SaaS</h3>
+                <button class="hamburger-menu"><i class="ri-menu-line"></i></button>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="nav-item"><a href="dashboard.html"><i class="ri-dashboard-line"></i><span>Dashboard</span></a></li>
+                    <li class="nav-item active"><a href="settings.html"><i class="ri-settings-3-line"></i><span>Settings</span></a></li>
+                    <li class="nav-item"><a href="help.html"><i class="ri-question-line"></i><span>Help Center</span></a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-profile-mini">
+                    <img src="https://i.pravatar.cc/150?img=6" alt="User Avatar">
+                    <div class="user-info">
+                        <span>User</span>
+                        <small>Member</small>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <div class="main-content">
+            <header class="top-navbar">
+                <div class="navbar-left">
+                    <h1>Settings</h1>
+                </div>
+                <div class="navbar-center">
+                    <div class="search-bar">
+                        <i class="ri-search-line"></i>
+                        <input type="text" placeholder="Search settings...">
+                    </div>
+                </div>
+                <div class="navbar-right">
+                    <div class="notification-bell">
+                        <i class="ri-notification-3-line"></i>
+                        <span class="badge">0</span>
+                    </div>
+                    <div class="user-avatar-dropdown">
+                        <img src="https://i.pravatar.cc/150?img=6" alt="User Avatar">
+                    </div>
+                </div>
+            </header>
+
+            <main class="dashboard-area">
+                <div class="settings-container card">
+                    <div class="settings-tabs">
+                        <button class="tab-button active" data-tab="profile">Profile</button>
+                        <button class="tab-button" data-tab="account">Account</button>
+                        <button class="tab-button" data-tab="appearance">Appearance</button>
+                        <button class="tab-button" data-tab="notifications">Notifications</button>
+                        <button class="tab-button" data-tab="privacy">Privacy</button>
+                        <button class="tab-button" data-tab="api">API</button>
+                    </div>
+                    <div class="settings-content">
+                        <!-- Profile Tab -->
+                        <div id="profile" class="tab-pane active">
+                            <h3>Profile Settings</h3>
+                            <div class="form-group avatar-upload">
+                                <img src="https://i.pravatar.cc/150?img=6" alt="User Avatar" class="profile-avatar-preview" id="profile-avatar-preview">
+                                <input type="file" id="avatarUpload" accept="image/*">
+                                <label for="avatarUpload" class="btn btn-secondary">Change Avatar</label>
+                            </div>
+                            <div class="form-group">
+                                <label for="fullName">Full Name</label>
+                                <input type="text" id="fullName" value="">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" value="jane.doe@example.com" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="bio">Bio</label>
+                                <textarea id="bio" placeholder="Tell us about yourself...">A passionate user of the AI SaaS Dashboard.</textarea>
+                            </div>
+                            <button class="btn btn-primary" id="saveProfileChanges">Save Changes</button>
+                        </div>
+
+                        <!-- Account Tab -->
+                        <div id="account" class="tab-pane">
+                            <h3>Account Settings</h3>
+                            <div class="form-group">
+                                <label for="currentPassword">Current Password</label>
+                                <input type="password" id="currentPassword">
+                            </div>
+                            <div class="form-group">
+                                <label for="newPassword">New Password</label>
+                                <input type="password" id="newPassword">
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmNewPassword">Confirm New Password</label>
+                                <input type="password" id="confirmNewPassword">
+                            </div>
+                            <button class="btn btn-primary" id="changePassword">Change Password</button>
+                            <hr class="my-xl">
+                            <button class="btn btn-danger" id="deleteAccount">Delete Account</button>
+                        </div>
+
+                        <!-- Tab: Appearance -->
+                        <div id="appearance" class="tab-pane">
+                            <h3>Appearance Settings</h3>
+                            <div class="form-group">
+                                <label for="colorScheme">Color Scheme</label>
+                                <select id="colorScheme">
+                                    <option value="violet-blue">Violet & Blue (Default)</option>
+                                    <option value="emerald-blue">Emerald & Blue</option>
+                                    <option value="amber-violet">Amber & Violet</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="fontSize">Font Size</label>
+                                <input type="range" id="fontSize" min="14" max="18" value="16">
+                                <span id="fontSizeValue" style="margin-left: var(--spacing-sm);">16px</span>
+                            </div>
+                            <div class="toggle-setting">
+                                <span>Reduce Motion (Animations)</span>
+                                <label class="switch">
+                                    <input type="checkbox" id="reduceMotionToggle">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <button class="btn btn-primary" id="saveAppearance">Save Appearance</button>
+                        </div>
+
+                        <!-- Notifications Tab -->
+                        <div id="notifications" class="tab-pane">
+                            <h3>Notification Preferences</h3>
+                            <p class="mb-lg">Choose how you want to be notified.</p>
+                            <div class="notification-grid">
+                                <div class="notification-type-header"></div>
+                                <div class="notification-type-header">Email</div>
+                                <div class="notification-type-header">Push</div>
+                                <div class="notification-type-header">In-App</div>
+
+                                <div class="notification-category">New Features</div>
+                                <div class="notification-toggle">
+                                    <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+                                </div>
+                                <div class="notification-toggle">
+                                    <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+                                </div>
+                                <div class="notification-toggle">
+                                    <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+                                </div>
+
+                                <div class="notification-category">Security Alerts</div>
+                                <div class="notification-toggle">
+                                    <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+                                </div>
+                                <div class="notification-toggle">
+                                    <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+                                </div>
+                                <div class="notification-toggle">
+                                    <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+                                </div>
+
+                                <div class="notification-category">Product Updates</div>
+                                <div class="notification-toggle">
+                                    <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+                                </div>
+                                <div class="notification-toggle">
+                                    <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+                                </div>
+                                <div class="notification-toggle">
+                                    <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary mt-xl" id="saveNotificationPreferences">Save Preferences</button>
+                        </div>
+
+                        <!-- Privacy Tab -->
+                        <div id="privacy" class="tab-pane">
+                            <h3>Privacy Settings</h3>
+                            <div class="toggle-setting">
+                                <span>Share anonymized usage data</span>
+                                <label class="switch">
+                                    <input type="checkbox" id="shareUsageData">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="toggle-setting">
+                                <span>Allow personalized recommendations</span>
+                                <label class="switch">
+                                    <input type="checkbox" checked id="personalizedRecommendations">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <hr class="my-xl">
+                            <button class="btn btn-danger" id="requestDataExport">Request Data Export</button>
+                        </div>
+
+                        <!-- API Tab -->
+                        <div id="api" class="tab-pane">
+                            <h3>API Keys</h3>
+                            <p class="mb-lg">Manage your API keys for programmatic access.</p>
+                            <button class="btn btn-primary mb-xl" id="generateApiKey"><i class="ri-add-line"></i> Generate New API Key</button>
+                            <div class="api-keys-list">
+                                <div class="api-key-item">
+                                    <div class="key-display">sk_live_********************abcd</div>
+                                    <div class="key-actions">
+                                        <button class="btn btn-icon" title="Copy to clipboard"><i class="ri-file-copy-line"></i></button>
+                                        <button class="btn btn-icon btn-danger" title="Revoke key"><i class="ri-delete-bin-line"></i></button>
+                                    </div>
+                                </div>
+                                <div class="api-key-item">
+                                    <div class="key-display">sk_test_********************efgh</div>
+                                    <div class="key-actions">
+                                        <button class="btn btn-icon" title="Copy to clipboard"><i class="ri-file-copy-line"></i></button>
+                                        <button class="btn btn-icon btn-danger" title="Revoke key"><i class="ri-delete-bin-line"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Main JS -->
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/settings.js"></script>
+</body>
+</html>

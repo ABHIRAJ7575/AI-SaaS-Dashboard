@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI SaaS Dashboard - Help Center</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3 class="logo">AI-SaaS</h3>
+                <button class="hamburger-menu"><i class="ri-menu-line"></i></button>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="nav-item"><a href="dashboard.html"><i class="ri-dashboard-line"></i><span>Dashboard</span></a></li>
+                    <li class="nav-item"><a href="settings.html"><i class="ri-settings-3-line"></i><span>Settings</span></a></li>
+                    <li class="nav-item active"><a href="help.html"><i class="ri-question-line"></i><span>Help Center</span></a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-profile-mini">
+                    <img src="https://i.pravatar.cc/150?img=6" alt="User Avatar">
+                    <div class="user-info">
+                        <span>User</span>
+                        <small>Member</small>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <div class="main-content">
+            <header class="top-navbar">
+                <div class="navbar-left">
+                    <h1>Help Center</h1>
+                </div>
+                <div class="navbar-center">
+                    <div class="search-bar">
+                        <i class="ri-search-line"></i>
+                        <input type="text" placeholder="How can we help you?">
+                    </div>
+                </div>
+                <div class="navbar-right">
+                    <div class="notification-bell">
+                        <i class="ri-notification-3-line"></i>
+                        <span class="badge">0</span>
+                    </div>
+                    <div class="user-avatar-dropdown">
+                        <img src="https://i.pravatar.cc/150?img=6" alt="User Avatar">
+                    </div>
+                </div>
+            </header>
+
+            <main class="dashboard-area">
+                <div class="help-center-container">
+                    <div class="search-bar">
+                        <i class="ri-search-line"></i>
+                        <input type="text" id="faq-search-input" placeholder="How can we help you?">
+                    </div>
+                    <div class="category-cards-grid">
+                        <div class="category-card card">
+                            <i class="ri-book-open-line"></i>
+                            <h3>Getting Started</h3>
+                            <p>Learn the basics of using our dashboard.</p>
+                        </div>
+                        <div class="category-card card">
+                            <i class="ri-user-line"></i>
+                            <h3>Account Management</h3>
+                            <p>Manage your profile, login, and security.</p>
+                        </div>
+                        <div class="category-card card">
+                            <i class="ri-bank-card-line"></i>
+                            <h3>Billing & Subscriptions</h3>
+                            <p>Information about payments and plans.</p>
+                        </div>
+                        <div class="category-card card">
+                            <i class="ri-lightbulb-line"></i>
+                            <h3>Troubleshooting</h3>
+                            <p>Find solutions to common issues.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-accordion card">
+                        <h3>Frequently Asked Questions</h3>
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                                How do I reset my password? <i class="ri-arrow-down-s-line"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <p>You can reset your password by clicking on the "Forgot Password?" link on the login page.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                                Can I change my email address? <i class="ri-arrow-down-s-line"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <p>Yes, you can change your email address in the Account Settings section.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-support card">
+                        <h3>Still need help?</h3>
+                        <p>Contact our support team directly.</p>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="contact-name">Name</label>
+                                <input type="text" id="contact-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email">Email</label>
+                                <input type="email" id="contact-email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-subject">Subject</label>
+                                <input type="text" id="contact-subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-category">Category</label>
+                                <select id="contact-category">
+                                    <option value="general">General Inquiry</option>
+                                    <option value="billing">Billing</option>
+                                    <option value="technical">Technical Support</option>
+                                    <option value="feedback">Feedback</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-message">Message</label>
+                                <textarea id="contact-message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Main JS -->
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/help.js"></script>
+</body>
+</html>

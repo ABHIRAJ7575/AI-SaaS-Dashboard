@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI SaaS Dashboard - Main</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/dashboard-clean.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3 class="logo">AI-SaaS</h3>
+                <button class="hamburger-menu"><i class="ri-menu-line"></i></button>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="nav-item active"><a href="dashboard.html"><i class="ri-dashboard-line"></i><span>Dashboard</span></a></li>
+                    <li class="nav-item"><a href="settings.html"><i class="ri-settings-3-line"></i><span>Settings</span></a></li>
+                    <li class="nav-item"><a href="help.html"><i class="ri-question-line"></i><span>Help Center</span></a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-profile-mini">
+                    <img src="https://i.pravatar.cc/150?img=6" alt="User Avatar">
+                    <div class="user-info">
+                        <span>User</span>
+                        <small>Member</small>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <div class="main-content">
+            <header class="top-navbar">
+                <div class="navbar-left">
+                    <h1>Dashboard</h1>
+                </div>
+                <div class="navbar-center">
+                    <div class="search-bar">
+                        <i class="ri-search-line"></i>
+                        <input type="text" placeholder="Global Search (Ctrl+K)">
+                    </div>
+                </div>
+                <div class="navbar-right">
+                    <div class="notification-bell">
+                        <i class="ri-notification-3-line"></i>
+                        <span class="badge">0</span>
+                    </div>
+                    <div class="user-avatar-dropdown">
+                        <img src="https://i.pravatar.cc/150?img=6" alt="User Avatar">
+                    </div>
+                </div>
+            </header>
+
+            <main class="dashboard-area">
+                <section class="welcome-section card">
+                    <h2 id="dashboardGreeting">Welcome to Your Dashboard</h2>
+                    <p>Get started by exploring the features and capabilities of your AI SaaS platform.</p>
+                    <div class="quick-actions-grid">
+                        <a href="settings.html" class="btn btn-primary">Go to Settings</a>
+                        <a href="help.html" class="btn btn-secondary">View Help</a>
+                    </div>
+                </section>
+
+                <section class="getting-started-section">
+                    <div class="info-card card">
+                        <div class="icon-wrapper bg-violet">
+                            <i class="ri-lightbulb-line"></i>
+                        </div>
+                        <div class="content">
+                            <h3>Getting Started</h3>
+                            <p>Welcome to your AI SaaS Dashboard. This is your central hub for managing your AI-powered solutions.</p>
+                            <a href="help.html" class="btn btn-ghost">Learn More</a>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card card">
+                        <div class="icon-wrapper bg-blue">
+                            <i class="ri-settings-3-line"></i>
+                        </div>
+                        <div class="content">
+                            <h3>Configure Your Settings</h3>
+                            <p>Customize your dashboard experience and manage your account preferences.</p>
+                            <a href="settings.html" class="btn btn-ghost">Go to Settings</a>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card card">
+                        <div class="icon-wrapper bg-emerald">
+                            <i class="ri-question-line"></i>
+                        </div>
+                        <div class="content">
+                            <h3>Need Help?</h3>
+                            <p>Access our comprehensive help center and documentation to get the most out of your platform.</p>
+                            <a href="help.html" class="btn btn-ghost">Visit Help Center</a>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <button class="fab" onclick="window.location.href='settings.html'"><i class="ri-add-line"></i></button>
+        </div>
+    </div>
+
+    <!-- Main JS -->
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/utils.js"></script>
+</body>
+</html>
